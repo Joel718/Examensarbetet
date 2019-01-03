@@ -6,6 +6,8 @@ Jag kommer i senare skede skriva användardokumentation för hur man startar upp
 
 # How to setup project
 
+1. Ladda ner repositoryt
+
 # To-Dos
 
 - [X] Starta upp projekt med express generator och använd pug som template
