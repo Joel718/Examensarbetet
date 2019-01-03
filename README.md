@@ -15,3 +15,5 @@ Jag kommer i senare skede skriva användardokumentation för hur man startar upp
 - [ ] Skriva logg för arbetet hitils
 - [ ] Dokumentation för hur man installerar och använder projektet
 - [ ] executive summary
+
+Se även fler To-Dos genom att gå in under fliken "Issues" i projektet. 
