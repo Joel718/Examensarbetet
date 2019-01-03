@@ -4,6 +4,8 @@ Detta projekt kommer jag att med node.js bygga en färdig webbshop. Tanken är a
 
 Jag kommer i senare skede skriva användardokumentation för hur man startar upp webshoppen och hur man använder den. 
 
+# How to setup project
+
 # To-Dos
 
 - [X] Starta upp projekt med express generator och använd pug som template
