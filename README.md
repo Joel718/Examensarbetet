@@ -17,3 +17,5 @@ Jag kommer i senare skede skriva användardokumentation för hur man startar upp
 - [ ] executive summary
 
 Se även fler To-Dos genom att gå in under fliken "Issues" i projektet. 
+
+Demo länk:
