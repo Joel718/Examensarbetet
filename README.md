@@ -11,3 +11,4 @@ Jag kommer i senare skede skriva användardokumentation för hur man startar upp
 - [X] Starta upp projekt med express generator och använd pug som template
 - [ ] Bygga på index
 - [ ] Skriva logg för arbetet hitils
+- [ ] Dokumentation för hur man installerar och använder projektet
