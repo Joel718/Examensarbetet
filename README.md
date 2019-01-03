@@ -14,3 +14,4 @@ Jag kommer i senare skede skriva användardokumentation för hur man startar upp
 - [ ] Bygga på index
 - [ ] Skriva logg för arbetet hitils
 - [ ] Dokumentation för hur man installerar och använder projektet
+- [ ] executive summary
