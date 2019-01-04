@@ -10,7 +10,7 @@ Jag kommer i senare skede skriva användardokumentation för hur man startar upp
 
 # To-Dos
 
-- [X] Starta upp projekt med express generator och använd pug som template
+- [X] Starta upp projekt med express generator och använd hbs som template
 - [X] Bygga på index
 - [ ] Skriva logg för arbetet hitils
 - [ ] Dokumentation för hur man installerar och använder projektet
