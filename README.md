@@ -11,10 +11,14 @@ Jag kommer i senare skede skriva användardokumentation för hur man startar upp
 # To-Dos
 
 - [X] Starta upp projekt med express generator och använd pug som template
-- [ ] Bygga på index
+- [X] Bygga på index
 - [ ] Skriva logg för arbetet hitils
 - [ ] Dokumentation för hur man installerar och använder projektet
 - [ ] executive summary
+- [ ] Setup mongoDB create products and list from db to index
+- [ ] Kundvagnssida
+- [ ] Konto registrering
+- [ ] Lista ordrar
 
 Se även fler To-Dos genom att gå in under fliken "Issues" i projektet. 
 
