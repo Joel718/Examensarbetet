@@ -19,6 +19,7 @@ Jag kommer i senare skede skriva användardokumentation för hur man startar upp
 - [ ] Kundvagnssida
 - [ ] Konto registrering
 - [ ] Lista ordrar
+- [ ] Validering
 
 Se även fler To-Dos genom att gå in under fliken "Issues" i projektet. 
 
