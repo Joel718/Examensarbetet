@@ -1,4 +1,4 @@
-# Examensarbetet
+# Examensarbetet - Joel M
 
 Detta projekt kommer jag att med Node.js bygga en färdig webbshop. Tanken är att utomstående ska kunna antingen använda den som den är eller bygga vidare/modifiera webbshopen som önskas. 
 
