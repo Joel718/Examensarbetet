@@ -26,12 +26,11 @@ Jag kommer i senare skede skriva användardokumentation för hur man startar upp
 - [ ] Dokumentation för hur man installerar och använder projektet
 - [ ] executive summary
 - [X] Setup mongoDB create products and list from db to index
-- [ ] Kundvagnssida
-- [ ] Konto registrering
+- [ ] Kundvagn
+- [X] Konto registrering
 - [ ] Lista ordrar
 - [ ] Validering
 - [ ] Routing
-- [ ] Sign up
 
 Se även fler To-Dos genom att gå in under fliken "Issues" i projektet. 
 
