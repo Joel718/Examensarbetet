@@ -10,7 +10,6 @@ var session = require('express-session');
 var passport = require('passport');
 var flash = require('connect-flash');
 var validator = require('express-validator');
-var catalogRouter = require('./routes/catalog'); //Import routes for "catalog" area of site
 var compression = require('compression');
 var helmet = require('helmet');
 
@@ -22,6 +21,9 @@ app.use(compression()); //Compress all routes
 
 mongoose.connect('mongodb://localhost:27017/project', {useNewUrlParser: true});
 require('./config/passport');
+
+app.listen(process.env.PORT);
+
 
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
@@ -39,7 +41,6 @@ app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/catalog', catalogRouter);
 app.use(helmet());
 
 // catch 404 and forward to error handler
