@@ -17,8 +17,10 @@ Jag kommer i senare skede skriva användardokumentation för hur man startar upp
 
 5. localhost should now be running on port 3000.
 
+6. To upload products onto database you run "node product-list.js" in the terminal from inside the "transfer" folder.
 
-# To-Dos
+
+# Todos
 
 - [X] Starta upp projekt med express generator och använd hbs som template
 - [X] Bygga på index
@@ -29,7 +31,7 @@ Jag kommer i senare skede skriva användardokumentation för hur man startar upp
 - [ ] Kundvagn
 - [X] Konto registrering
 - [ ] Lista ordrar
-- [ ] Validering
+- [X] Validering
 - [ ] Routing
 
 Se även fler To-Dos genom att gå in under fliken "Issues" i projektet. 
