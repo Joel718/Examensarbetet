@@ -33,6 +33,9 @@ Jag kommer i senare skede skriva användardokumentation för hur man startar upp
 - [ ] Lista ordrar
 - [X] Validering
 - [ ] Routing
+- [ ] Release 1
+- [ ] Release 2
+- [ ] Release 3
 
 Se även fler To-Dos genom att gå in under fliken "Issues" i projektet. 
 
