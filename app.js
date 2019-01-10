@@ -10,10 +10,15 @@ var session = require('express-session');
 var passport = require('passport');
 var flash = require('connect-flash');
 var validator = require('express-validator');
+var catalogRouter = require('./routes/catalog'); //Import routes for "catalog" area of site
+var compression = require('compression');
+var helmet = require('helmet');
 
 var indexRouter = require('./routes/index');
 
 var app = express();
+
+app.use(compression()); //Compress all routes
 
 mongoose.connect('mongodb://localhost:27017/project', {useNewUrlParser: true});
 require('./config/passport');
@@ -34,6 +39,8 @@ app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/catalog', catalogRouter);
+app.use(helmet());
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
