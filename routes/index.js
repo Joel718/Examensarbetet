@@ -37,4 +37,8 @@ router.get('/account/my-account', function(req, res, next) {
   res.render('account/my-account');
 });
 
+router.get('/main-page/startpage', function(req, res, next) {
+  res.render('main-page/startpage');
+});
+
 module.exports = router;
