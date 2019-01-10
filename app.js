@@ -22,7 +22,11 @@ app.use(compression()); //Compress all routes
 mongoose.connect('mongodb://localhost:27017/project', {useNewUrlParser: true});
 require('./config/passport');
 
-app.listen(process.env.PORT);
+var port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+app.listen(port);
 
 
 // view engine setup
