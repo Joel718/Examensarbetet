@@ -19,12 +19,15 @@ Jag kommer i senare skede skriva användardokumentation för hur man startar upp
 
 6. To upload products onto database you run "node product-list.js" in the terminal from inside the "transfer" folder.
 
+# How to deploy site
+
+Visit https://devcenter.heroku.com/articles/getting-started-with-nodejs and follow the guide from there
+also read this article https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/deployment
 
 # Todos
 
 - [X] Starta upp projekt med express generator och använd hbs som template
 - [X] Bygga på index
-- [ ] Skriva logg för arbetet
 - [ ] Dokumentation för hur man installerar och använder projektet
 - [ ] executive summary
 - [X] Setup mongoDB create products and list from db to index
@@ -33,7 +36,7 @@ Jag kommer i senare skede skriva användardokumentation för hur man startar upp
 - [ ] Lista ordrar
 - [X] Validering
 - [ ] Routing
-- [ ] Release 1
+- [X] Release 1
 - [ ] Release 2
 - [ ] Release 3
 
