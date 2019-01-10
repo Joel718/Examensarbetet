@@ -39,4 +39,4 @@ Jag kommer i senare skede skriva användardokumentation för hur man startar upp
 
 Se även fler To-Dos genom att gå in under fliken "Issues" i projektet. 
 
-Demo:
+Demo: https://ancient-badlands-72955.herokuapp.com
