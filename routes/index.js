@@ -3,6 +3,7 @@ var router = express.Router();
 var Product = require('../mongoose_schema/products');
 var csrf = require('csurf');
 var session = require('express-session');
+var passport = require('passport');
 
 var csrfProtection = csrf();
 router.use(csrfProtection);
@@ -21,15 +22,19 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/account/create-account', function(req, res, next) {
-
-  res.render('account/create-account', {csrfToken: req.csrfToken()});
+  var messages = req.flash('error');
+  res.render('account/create-account', {csrfToken: req.csrfToken(), messages: messages, hasErrors: messages.length > 0});
 
 });
 
-router.post('/account/create-account', function(req, res, next) {
+router.post('/account/create-account', passport.authenticate('local.signup', {
+  successRedirect: '/account/my-account',
+  failureRedirect: '/account/create-account',
+  failureFlash: true
+}));
 
-    res.redirect('/');
-
+router.get('/account/my-account', function(req, res, next) {
+  res.render('account/my-account');
 });
 
 module.exports = router;
