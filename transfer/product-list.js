@@ -3,7 +3,7 @@ var Product = require('../mongoose_schema/products');
 var mongoose = require('mongoose');
 
 //mongoose.connect('mongodb://localhost:27017/project', {useNewUrlParser: true});
-mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds119734.mlab.com:19734/examendb', {useNewUrlParser: true});
+mongoose.connect('mongodb://uhhi2000:Hpf21045@ds119734.mlab.com:19734/examendb', {useNewUrlParser: true});
 
 var products = [
         new Product({

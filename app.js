@@ -19,14 +19,9 @@ var app = express();
 
 app.use(compression()); //Compress all routes
 
-mongoose.connect('mongodb://localhost:27017/project', {useNewUrlParser: true});
+// mongoose.connect('mongodb://localhost:27017/project', {useNewUrlParser: true});
+mongoose.connect('mongodb://uhhi2000:Hpf21045@ds119734.mlab.com:19734/examendb', {useNewUrlParser: true});
 require('./config/passport');
-
-var port = process.env.PORT;
-if (port == null || port == "") {
-  port = 8000;
-}
-app.listen(port);
 
 
 // view engine setup
