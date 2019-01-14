@@ -1,15 +1,5 @@
-.card img{
+img {
 
-  max-height: 175px;
+    max-height: 200px;
 
-}
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgb(52, 58, 64);
-  color: white;
-  text-align: center;
 }

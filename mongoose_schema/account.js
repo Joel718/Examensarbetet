@@ -1,5 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+
+// npm package "bcrypt-nodejs" for hashing passwords
 var bcrypt = require('bcrypt-nodejs');
 
 var userSchema = new Schema({

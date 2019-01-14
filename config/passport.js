@@ -1,5 +1,7 @@
 var passport = require('passport');
 var User = require('../mongoose_schema/account');
+
+// Authenticate requests
 var LocalStrategy = require('passport-local').Strategy;
 
 passport.serializeUser(function(user, done){
