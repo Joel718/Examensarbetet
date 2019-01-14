@@ -19,7 +19,7 @@ Jag kommer i senare skede skriva användardokumentation för hur man startar upp
 
 6. To upload products onto database you run "node product-list.js" in the terminal from inside the "transfer" folder.
 
-###How to deploy site
+## How to deploy site
 
 1. Visit https://devcenter.heroku.com/articles/getting-started-with-nodejs and follow the guide from there
 also read this article https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/deployment
