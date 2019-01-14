@@ -33,13 +33,12 @@ also read this article https://developer.mozilla.org/en-US/docs/Learn/Server-sid
 - [X] Setup connection mongoDB create products and list from db to index
 - [X] Konto registrering
 - [X] Validering
-- [ ] Kundvagn
-- [ ] Lista ordrar
 - [X] Release 1
 - [ ] Release 2
 - [ ] Release 3
 - [ ] Dokumentation för hur man installerar och använder projektet
 - [ ] executive summary
+- [ ] Sammanställa examensrapport
 
 Se även fler To-Dos genom att gå in under fliken "Issues" i projektet. 
 
