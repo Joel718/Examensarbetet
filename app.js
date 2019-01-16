@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 // Anropar express
 var express = require('express');
 var path = require('path');
+var bodyParser = require('body-parser');
 
 // npm paket för användning av handlebars
 var expressHbs = require('express-handlebars');
@@ -16,10 +17,6 @@ var mongoose = require('mongoose');
 // middleware, session data sparas server side
 // kan användas för göra det möjligt att produkter sparas när användare är inloggad
 var session = require('express-session');
-
-// Ett API som Validerar requests. 
-// Kontroll om vad som händer vid "success" eller "fail"
-var passport = require('passport');
 
 // Används för att spara meddelanden i session. Meddlandena skrivs i flash och rensas sedan efter att det visats för användaren.
 // flash ser till att efter rendering så finns fortfarande meddelandena/meddelandet kvar.
@@ -35,12 +32,8 @@ var helmet = require('helmet');
 // Renderar index.js filen i routes mappen
 var indexRouter = require('./routes/index');
 
-var bodyParser = require('body-parser');
-
-mongoose.connect('mongodb://localhost:27017/project', {useNewUrlParser: true});
 // Skapar anslutningen till live databasen hos mlab
 mongoose.connect('mongodb://uhhi2000:Hpf21045@ds119734.mlab.com:19734/examendb', {useNewUrlParser: true});
-require('./config/passport');
 
 // Sparar express i variabel för att ens kunna skapa vår app med.
 var app = express();
@@ -68,21 +61,8 @@ app.use(session({
 }));
 
 app.use(flash());
-app.use(passport.initialize());
-app.use(passport.session());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-app.use(function(req, res, next) {
-  res.locals.login = req.isAuthenticated();
-  next();
-});
-
-app.use(function(req, res, next) {
-  res.locals.login = req.isAuthenticated();
-  res.locals.session = req.session;
-  next();
-});
 
 // Renderar/parsar appen till index
 app.use('/', indexRouter);
