@@ -26,20 +26,4 @@ also read this article https://developer.mozilla.org/en-US/docs/Learn/Server-sid
 
 2. Create an account at mLab - https://mlab.com
 
-# Todos
-
-- [X] Starta upp projekt med express generator och använd hbs som template
-- [X] Bygga på index
-- [X] Setup connection mongoDB create products and list from db to index
-- [X] Konto registrering
-- [X] Validering
-- [X] Release 1
-- [ ] Release 2
-- [ ] Release 3
-- [ ] Dokumentation för hur man installerar och använder projektet
-- [ ] executive summary
-- [ ] Sammanställa examensrapport
-
-Se även fler To-Dos genom att gå in under fliken "Issues" i projektet. 
-
 Demo: https://ancient-badlands-72955.herokuapp.com
