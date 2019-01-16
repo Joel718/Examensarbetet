@@ -35,6 +35,7 @@ var helmet = require('helmet');
 // Renderar index.js filen i routes mappen
 var indexRouter = require('./routes/index');
 
+var bodyParser = require('body-parser');
 
 mongoose.connect('mongodb://localhost:27017/project', {useNewUrlParser: true});
 // Skapar anslutningen till live databasen hos mlab
@@ -52,6 +53,7 @@ app.set('view engine', '.hbs');
 
 // parsar paketen
 app.use(express.json());
+app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(validator());
 
