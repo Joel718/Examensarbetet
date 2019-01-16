@@ -72,7 +72,11 @@
 <ul>
   <li><a class="button1" href="/main-page/startpage">Startsidan <span class="sr-only">(current)</span></a></li>
   <li><a class="button2" href="/product-page/index">Produkter <span class="sr-only">(current)</span></a></li>
-  <li><a class="button3" href="/main-page/startpage">Min profil</a></li>
+  {{# if login }}
+    <li><a class="button3" href="/account/my-account">Min profil</a></li>
+    <li><a class="button5" href="/main-page/startpage">Logga ut</a></li>
+  {{else}}
   <li><a class="button4" href="/account/create-account">Skapa konto</a></li>
-  <li><a class="button5" href="/main-page/startpage">Logga ut</a></li>
+  <li><a class="button4" href="/account/login">Logga in</a></li>
+  {{/if}}
 </ul>

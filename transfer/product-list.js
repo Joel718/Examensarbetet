@@ -5,7 +5,7 @@ var Product = require('../mongoose_schema/products');
 var mongoose = require('mongoose');
 
 // Skapar anslutning mot databasen
-//mongoose.connect('mongodb://localhost:27017/project', {useNewUrlParser: true});
+mongoose.connect('mongodb://localhost:27017/project', {useNewUrlParser: true});
 mongoose.connect('mongodb://uhhi2000:Hpf21045@ds119734.mlab.com:19734/examendb', {useNewUrlParser: true});
 
 // Skapar upp produkter från schema

@@ -1,7 +1,7 @@
 // https://www.npmjs.com
-// För *createError* skapa felmedelanden: tex 404, 500 koder etch
-// Cookie parser
+// http-errors för *createError* skapa felmedelanden: tex 404, 500 koder etch
 var createError = require('http-errors');
+var cookieParser = require('cookie-parser');
 
 // Anropar express
 var express = require('express');
@@ -26,6 +26,8 @@ var passport = require('passport');
 var flash = require('connect-flash');
 var validator = require('express-validator');
 
+var MongoStore = require('connect-mongo')(session);
+
 // Paket jag la till som stod i dokumentationen för deploy
 var compression = require('compression');
 var helmet = require('helmet');
@@ -34,7 +36,7 @@ var helmet = require('helmet');
 var indexRouter = require('./routes/index');
 
 
-// mongoose.connect('mongodb://localhost:27017/project', {useNewUrlParser: true});
+mongoose.connect('mongodb://localhost:27017/project', {useNewUrlParser: true});
 // Skapar anslutningen till live databasen hos mlab
 mongoose.connect('mongodb://uhhi2000:Hpf21045@ds119734.mlab.com:19734/examendb', {useNewUrlParser: true});
 require('./config/passport');
@@ -54,11 +56,31 @@ app.use(express.urlencoded({ extended: false }));
 app.use(validator());
 
 // Hashar session http://www.senchalabs.org/connect/session.html
-app.use(session({secret: 'mysecret', resave: false, saveUninitialized: false}));
+app.use(session({
+  secret: 'mysecret', 
+  resave: false, 
+  saveUninitialized: false,
+  store: new MongoStore({ mongooseConnection: mongoose.connection }),
+  // cookie expire *time to live*
+  cookie: { maxAge: 180 * 60 * 1000 }
+}));
+
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(function(req, res, next) {
+  res.locals.login = req.isAuthenticated();
+  next();
+});
+
+app.use(function(req, res, next) {
+  res.locals.login = req.isAuthenticated();
+  res.locals.session = req.session;
+  next();
+});
 
 // Renderar/parsar appen till index
 app.use('/', indexRouter);
