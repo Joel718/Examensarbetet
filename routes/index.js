@@ -25,6 +25,11 @@ router.get('/main-page/startpage', function(req, res, next) {
   res.render('main-page/startpage');
 });
 
+// GET request startpage
+router.get('/product-page/checkout', function(req, res, next) {
+  res.render('product-page/checkout');
+});
+
 // See shopping_cart.js
 router.get('/add-to-cart/:id', function(req, res, next) {
   var productId = req.params.id;

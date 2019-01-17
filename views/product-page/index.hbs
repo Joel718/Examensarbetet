@@ -2,6 +2,7 @@
 {{# each products }}
   <div class="row">
     {{# each this }}
+    <form action="/" method="post" id="checkout-form">
       <div class="col-sm-6 col-md-4">
         <div class="card" style="width: 14rem; min-height: 350px;">
           <img src="{{ this.imagePath }}">
@@ -14,6 +15,7 @@
             </div>
           </div>
         </div>
+      </form>
       <br>
       </div>
     {{/each}}
