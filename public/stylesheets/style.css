@@ -52,61 +52,41 @@ li a {
   text-align: center;
   padding: 1px 16px;
   text-decoration: none;
+  
 
 }
 
+.button2{
 
-.button2 {
-
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  border: none;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Arial;
-  padding: 6px 10px;
   margin-top: 35%;
   margin-left: 10%;
-  text-align: center;
+  display: flex;
+  color: rgb(38, 38, 38);
+  font-family: helvetica;
   text-decoration: none;
-  -webkit-animation: glowing 2000ms infinite;
-  -moz-animation: glowing 2000ms infinite;
-  -o-animation: glowing 2000ms infinite;
-  animation: glowing 2000ms infinite;
+  text-transform: uppercase;
 
 }
 
-@-webkit-keyframes glowing {
+.button3 {
 
-  0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
-  50% { background-color: #FF0000; -webkit-box-shadow: 0 0 40px #FF0000; }
-  100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
 
-}
-
-@-moz-keyframes glowing {
-
-  0% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
-  50% { background-color: #FF0000; -moz-box-shadow: 0 0 40px #FF0000; }
-  100% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
+  margin-top: 39.5%;
+  margin-left: 10%;
+  display: flex;
+  color: rgb(38, 38, 38);
+  font-family: helvetica;
+  text-decoration: none;
+  text-transform: uppercase;
 
 }
 
-@-o-keyframes glowing {
-
-  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
-  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
-  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
-
+a:hover {
+  text-decoration: underline;
 }
 
-@keyframes glowing {
-
-  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
-  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
-  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
-  
+a:active {
+  color: black;
 }
 
 @media screen and (max-width: 600px) {

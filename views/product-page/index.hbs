@@ -2,16 +2,25 @@
 
   ul {
 
-    background-color: rgb(181, 180, 180);
+    background-color: white;
+    width: 100%;
+  }
+
+  body {
+
+    background-color: rgb(0, 0, 0);
 
   }
 
-  
+  .row {
+    margin-left: 15%;
+  }
 
 </style>
 
+<hr style="height: 100px;">
+
 <!-- Header knappar för navigering -->
-<br><br><br>
 {{# each products }}
   <div class="row">
    {{# each this }}
@@ -21,9 +30,11 @@
          <img src="{{ this.imagePath }}">
         <div class="card-body">
           <h4 class="card-title" style="text-align: center;">{{ this.title }}</h5>
-           <div id="paypal-button"></div>
+          {{this._id}}
+          <div id="paypal-button"></div>
         </div>
       </div>
+       </br>
     </form>
   </div>
   {{/each}}
