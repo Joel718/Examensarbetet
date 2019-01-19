@@ -1,76 +1,16 @@
 <style>
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
 
-  li {
-    float: left;
-  }
+  #logo {
 
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
+    width: 100px;
+    height: 100px;
 
-  li a:hover {
-    background-color: #111;
-  }
-
-
-  .button2 {
-    background-color: #004A7F;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    border: none;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Arial;
-    padding: 6px 10px;
-    margin-top: 10%;
-    text-align: center;
-    text-decoration: none;
-    -webkit-animation: glowing 1500ms infinite;
-    -moz-animation: glowing 1500ms infinite;
-    -o-animation: glowing 1500ms infinite;
-    animation: glowing 1500ms infinite;
-  }
-  @-webkit-keyframes glowing {
-    0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
-    50% { background-color: #FF0000; -webkit-box-shadow: 0 0 40px #FF0000; }
-    100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
-  }
-
-  @-moz-keyframes glowing {
-    0% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
-    50% { background-color: #FF0000; -moz-box-shadow: 0 0 40px #FF0000; }
-    100% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
-  }
-
-  @-o-keyframes glowing {
-    0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
-    50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
-    100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
-  }
-
-  @keyframes glowing {
-    0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
-    50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
-    100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
   }
 
 </style>
 
 <!-- Header knappar för navigering -->
-
 <ul>
-  <li><a class="button1" href="/main-page/startpage">Startsidan <span class="sr-only">(current)</span></a></li>
-  <li><a class="button2" href="/product-page/index">Produkter <span class="sr-only">(current)</span></a></li>
+  <li><a class="button1" href="/main-page/startpage"><img id="logo" src="https://www.freelogodesign.org/download/file?id=e7132ef4-e62a-4c73-93f6-af5a2a0bad15.png"></a></li>
+  <li><a class="button2" href="/product-page/index">Produkter</a></li>
 </ul>

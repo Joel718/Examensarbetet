@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var Cart = require('../mongoose_schema/shopping_cart');
 var Product = require('../mongoose_schema/products');
+
 
 // GET home page. Renderar startsidan 
 router.get('/', function(req, res, next) {
@@ -23,27 +23,6 @@ router.get('/product-page/index', function(req, res, next) {
 // GET request startpage
 router.get('/main-page/startpage', function(req, res, next) {
   res.render('main-page/startpage');
-});
-
-// GET request startpage
-router.get('/product-page/checkout', function(req, res, next) {
-  res.render('product-page/checkout');
-});
-
-// See shopping_cart.js
-router.get('/add-to-cart/:id', function(req, res, next) {
-  var productId = req.params.id;
-  var cart = new Cart(req.session.cart ? req.session.cart : {});
-
-  Product.findById(productId, function(err, product) {
-    if(err) {
-      return res.redirect('/');
-    }
-    cart.add(product, product.id);
-    req.session.cart = cart;
-    console.log(req.session.cart);
-    res.redirect('/');
-  });
 });
 
 module.exports = router;

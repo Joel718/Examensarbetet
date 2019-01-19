@@ -1,22 +1,19 @@
+
+<!-- Header knappar för navigering -->
 <br><br><br>
 {{# each products }}
   <div class="row">
-    {{# each this }}
+   {{# each this }}
     <form action="/" method="post" id="checkout-form">
       <div class="col-sm-6 col-md-4">
-        <div class="card" style="width: 14rem; min-height: 350px;">
-          <img src="{{ this.imagePath }}">
-          <div class="card-body">
-            <h5 class="card-title">{{ this.title }}</h5>
-            <p class="card-text">{{ this.text }}</p>
-            <div class="price">{{ this.price }}</div>
-            <div class="clearfix float-right">
-              <a href="/add-to-cart/{{this._id}}" class="btn btn-primary" role="button">Köp</a>
-            </div>
-          </div>
+        <div class="card">
+         <img src="{{ this.imagePath }}">
+        <div class="card-body">
+          <h4 class="card-title" style="text-align: center;">{{ this.title }}</h5>
+           <div id="paypal-button"></div>
         </div>
-      </form>
-      <br>
       </div>
-    {{/each}}
+    </form>
+  </div>
+  {{/each}}
 {{/each}}

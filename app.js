@@ -65,6 +65,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+
 // Ansluter till port 8000, denna port är ett krav av "heroku" https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment
 var port = process.env.PORT;
 if (port == null || port == "") {
