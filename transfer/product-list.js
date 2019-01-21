@@ -10,12 +10,24 @@ mongoose.connect('mongodb://uhhi2000:Hpf21045@ds119734.mlab.com:19734/examendb',
 // Skapar upp produkter från schema
 var products = [
     new Product({
-    imagePath: 'https://images.unsplash.com/photo-1523983302122-73e869e1f850?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+    imagePath: 'http://www.car-revs-daily.com/wp-content/uploads/2015/02/2015-BMW-M4-Fire-Orange-1.jpg',
     title: 'BMW',
+    price: "220.000"
     }), 
     new Product({
-        imagePath: 'https://images.unsplash.com/photo-1523983302122-73e869e1f850?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
-        title: 'BMW',
+        imagePath: 'https://car-images.bauersecure.com/pagefiles/74819/lotus_cars_01.jpg',
+        title: 'Lotus',
+        price: "350.000"
+    }), 
+    new Product({
+        imagePath: 'https://images.unsplash.com/photo-1541878117466-0e3000a65864?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+        title: 'Toyota',
+        price: "280.000"
+    }),
+    new Product({
+        imagePath: 'https://images.unsplash.com/photo-1521410195597-69e2218fcee8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+        title: 'Mazda',
+        price: "180.000"
     })
 ];
 

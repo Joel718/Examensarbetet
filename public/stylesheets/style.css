@@ -29,7 +29,7 @@ iframe {
 
 }
 
-ul {
+.ul1 {
 
   list-style-type: none;
   margin: 0;
@@ -39,9 +39,16 @@ ul {
 
 }
 
+
 li {
 
   float: left;
+
+}
+
+.li2 {
+  
+  float: right;
 
 }
 
@@ -70,7 +77,6 @@ li a {
 
 .button3 {
 
-
   margin-top: 39.5%;
   margin-left: 10%;
   display: flex;
@@ -81,8 +87,26 @@ li a {
 
 }
 
+.button4 {
+
+  margin-top: 39.5%;
+  color: rgb(38, 38, 38);
+  font-family: helvetica;
+  text-decoration: none;
+  text-transform: uppercase;
+
+}
+
+.g-signin2 {
+
+  margin-top: 22.5%;
+  
+}
+
 a:hover {
+
   text-decoration: underline;
+  
 }
 
 a:active {

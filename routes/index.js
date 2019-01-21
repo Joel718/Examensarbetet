@@ -25,4 +25,8 @@ router.get('/main-page/startpage', function(req, res, next) {
   res.render('main-page/startpage');
 });
 
+router.get('/contact', function(req, res, next) {
+  res.render('contact');
+});
+
 module.exports = router;

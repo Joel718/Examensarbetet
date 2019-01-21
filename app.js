@@ -12,6 +12,7 @@ var compression = require('compression');
 var helmet = require('helmet');
 var indexRouter = require('./routes/index');
 var app = express();
+var nodemailer = require('nodemailer');
 
 // Skapar anslutningen till live databasen hos mlab
 mongoose.connect('mongodb://uhhi2000:Hpf21045@ds119734.mlab.com:19734/examendb', {useNewUrlParser: true});
@@ -64,7 +65,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
 
 // Ansluter till port 8000, denna port är ett krav av "heroku" https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment
 var port = process.env.PORT;

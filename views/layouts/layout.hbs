@@ -3,8 +3,9 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <meta name="google-signin-client_id" content="582394131801-es51utnc1jgvkblhehi8uhtrksajvb5e.apps.googleusercontent.com">
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   </head>
 
   <body>
@@ -16,50 +17,73 @@
       {{{body}}}
    
     </div>
-    
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="https://www.paypalobjects.com/api/checkout.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <script>
-        paypal.Button.render({
-          // Configure environment
-          env: 'sandbox',
-          client: {
-            sandbox: 'demo_sandbox_client_id',
-            production: 'demo_production_client_id'
-          },
-          // Customize button (optional)
-          locale: 'en_US',
-          style: {
-            size: 'small',
-            color: 'gold',
-            shape: 'pill',
-          },
+      paypal.Button.render({
+            // Configure environment
+            env: 'sandbox',
+            client: {
+              sandbox: 'demo_sandbox_client_id',
+              production: 'demo_production_client_id'
+            },
+            // Customize button (optional)
+            locale: 'en_US',
+            style: {
+              size: 'small',
+              color: 'gold',
+              shape: 'pill',
+            },
 
-          // Enable Pay Now checkout flow (optional)
-          commit: true,
+            // Enable Pay Now checkout flow (optional)
+            commit: true,
 
-          // Set up a payment
-          payment: function(data, actions) {
-            return actions.payment.create({
-              transactions: [{
-                amount: {
-                  total: '0.01',
-                  currency: 'USD'
-                }
-              }]
-            });
-          },
-          // Execute the payment
-          onAuthorize: function(data, actions) {
-            return actions.payment.execute().then(function() {
-              // Show a confirmation message to the buyer
-              window.alert('Thank you for your purchase!');
-            });
-          }
-        }, '#paypal-button');
+            // Set up a payment
+            payment: function(data, actions) {
+              return actions.payment.create({
+                transactions: [{
+                  amount: {
+                    total: '0.01',
+                    currency: 'USD'
+                  }
+                }]
+              });
+            },
+            // Execute the payment
+            onAuthorize: function(data, actions) {
+              return actions.payment.execute().then(function() {
+                // Show a confirmation message to the buyer
+                window.alert('Thank you for your purchase!');
+              });
+            }
+          }, '.paypal-button');
+          
+          $(document).ready(function() {
+            $(".button4").hide();
+        });
+            function onSignIn(googleUser) {
+              var profile = googleUser.getBasicProfile();
+              console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+              console.log('Name: ' + profile.getName());
+              console.log('Image URL: ' + profile.getImageUrl());
+              console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+              $(".button4").show();
+              $(".g-signin2").hide();
+            }
+          
+
+    </script>
+    <script>
+      function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+          console.log('User signed out.');
+          $(".button4").hide();
+        });
+      }
     </script>
   </body>
 </html>
