@@ -10,9 +10,9 @@ mongoose.connect('mongodb://uhhi2000:Hpf21045@ds119734.mlab.com:19734/examendb',
 // Skapar upp produkter från schema
 var products = [
     new Product({
-    imagePath: 'http://www.car-revs-daily.com/wp-content/uploads/2015/02/2015-BMW-M4-Fire-Orange-1.jpg',
-    title: 'BMW',
-    price: "220.000"
+        imagePath: 'http://www.car-revs-daily.com/wp-content/uploads/2015/02/2015-BMW-M4-Fire-Orange-1.jpg',
+        title: 'BMW',
+        price: "220.000"
     }), 
     new Product({
         imagePath: 'https://car-images.bauersecure.com/pagefiles/74819/lotus_cars_01.jpg',

@@ -66,6 +66,29 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'testtestsson611@gmail.com',
+    pass: 'Test!123'
+  }
+});
+
+var mailOptions = {
+  from: 'testtestsson611@gmail.com',
+  to: 'testtestsson611@gmail.com',
+  subject: 'Sending Email using Node.js',
+  text: 'That was easy!'
+};
+
+transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});
+
 // Ansluter till port 8000, denna port är ett krav av "heroku" https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment
 var port = process.env.PORT;
 if (port == null || port == "") {
