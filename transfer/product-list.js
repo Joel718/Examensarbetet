@@ -12,22 +12,32 @@ var products = [
     new Product({
         imagePath: 'http://www.car-revs-daily.com/wp-content/uploads/2015/02/2015-BMW-M4-Fire-Orange-1.jpg',
         title: 'BMW',
-        price: "220.000"
+        price: "44000.000"
     }), 
     new Product({
         imagePath: 'https://car-images.bauersecure.com/pagefiles/74819/lotus_cars_01.jpg',
         title: 'Lotus',
-        price: "350.000"
+        price: "50000.000"
     }), 
     new Product({
         imagePath: 'https://images.unsplash.com/photo-1541878117466-0e3000a65864?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
         title: 'Toyota',
-        price: "280.000"
+        price: "28000.000"
     }),
     new Product({
         imagePath: 'https://images.unsplash.com/photo-1521410195597-69e2218fcee8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
         title: 'Mazda',
-        price: "180.000"
+        price: "20000.000"
+    }),
+    new Product({
+        imagePath: 'https://images.unsplash.com/photo-1530505849655-e0a1121554a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60',
+        title: 'Maserati',
+        price: "20000.000"
+    }),
+    new Product({
+        imagePath: 'https://images.unsplash.com/photo-1514867644123-6385d58d3cd4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60',
+        title: 'Ferrari',
+        price: "20000.000"
     })
 ];
 

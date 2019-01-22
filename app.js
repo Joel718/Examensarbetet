@@ -12,7 +12,6 @@ var compression = require('compression');
 var helmet = require('helmet');
 var indexRouter = require('./routes/index');
 var app = express();
-var nodemailer = require('nodemailer');
 
 // Skapar anslutningen till live databasen hos mlab
 mongoose.connect('mongodb://uhhi2000:Hpf21045@ds119734.mlab.com:19734/examendb', {useNewUrlParser: true});
@@ -64,29 +63,6 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
-});
-
-var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'testtestsson611@gmail.com',
-    pass: 'Test!123'
-  }
-});
-
-var mailOptions = {
-  from: 'testtestsson611@gmail.com',
-  to: 'testtestsson611@gmail.com',
-  subject: 'Sending Email using Node.js',
-  text: 'That was easy!'
-};
-
-transporter.sendMail(mailOptions, function(error, info){
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Email sent: ' + info.response);
-  }
 });
 
 // Ansluter till port 8000, denna port är ett krav av "heroku" https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment

@@ -17,11 +17,13 @@
       {{{body}}}
    
     </div>
+    <script src="/javascript/script.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="https://www.paypalobjects.com/api/checkout.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+      <!--Start Cookie Script--> <script type="text/javascript" charset="UTF-8" src="http://chs03.cookie-script.com/s/936ada4b91310cf6fd5739cf0e564024.js"></script> <!--End Cookie Script-->
     <script>
       paypal.Button.render({
             // Configure environment
@@ -30,6 +32,7 @@
               sandbox: 'demo_sandbox_client_id',
               production: 'demo_production_client_id'
             },
+            
             // Customize button (optional)
             locale: 'en_US',
             style: {
@@ -73,8 +76,6 @@
               $(".button4").show();
               $(".g-signin2").hide();
             }
-          
-
     </script>
     <script>
       function signOut() {

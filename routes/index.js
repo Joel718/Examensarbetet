@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 var Product = require('../mongoose_schema/products');
 
-
 // GET home page. Renderar startsidan 
 router.get('/', function(req, res, next) {
   res.render('main-page/startpage');
@@ -28,5 +27,14 @@ router.get('/main-page/startpage', function(req, res, next) {
 router.get('/contact', function(req, res, next) {
   res.render('contact');
 });
+
+router.get('/product-page/catalog', function(req, res, next) {
+  res.render('product-page/catalog');
+});
+
+router.get('/success', function(req, res, next) {
+  res.render('success');
+});
+
 
 module.exports = router;
