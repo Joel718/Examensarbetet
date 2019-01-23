@@ -16,6 +16,16 @@ iframe {
 
 }
 
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 11px;
+  color: white;
+  text-align: center;
+}
+
 html {
   scroll-behavior: smooth;
 }

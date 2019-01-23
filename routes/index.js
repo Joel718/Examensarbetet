@@ -36,5 +36,8 @@ router.get('/success', function(req, res, next) {
   res.render('success');
 });
 
+router.get('/google-site-verification: google7567fe4cac5164b6', function(req, res, next) {
+  res.render('google-site-verification: google7567fe4cac5164b6');
+});
 
 module.exports = router;
