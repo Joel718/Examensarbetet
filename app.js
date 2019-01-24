@@ -11,6 +11,7 @@ var MongoStore = require('connect-mongo')(session);
 var compression = require('compression');
 var helmet = require('helmet');
 var indexRouter = require('./routes/index');
+var nodemailer = require('nodemailer');
 var app = express();
 
 // Skapar anslutningen till live databasen hos mlab
@@ -65,7 +66,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-  var nodemailer = require('nodemailer');
+
 
   var transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -91,6 +92,15 @@ app.use(function(err, req, res, next) {
       console.log('Email sent: ' + info.response);
     }
   });
+
+  app.get('/api/users', function(req, res) {
+    var user_id = req.param(id);
+    var token = req.param('token');
+    var geo = req.param('geo');  
+  
+    res.send(user_id + ' ' + token + ' ' + geo);
+  });
+
 // });
 
 // Ansluter till port 8000, denna port är ett krav av "heroku" https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment

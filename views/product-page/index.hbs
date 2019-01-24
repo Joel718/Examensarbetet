@@ -25,6 +25,12 @@
     
   }
 
+  .footer {
+
+    background-color: rgb(19, 19, 19);
+
+  }
+
 </style>
 
 <hr style="height: 50px;">
@@ -33,17 +39,37 @@
 {{# each products }}
    {{# each this }}
     <div class="container">
+  <a href="catalog-view">
      <div class="w3-container" style="width: 500px; height: 425px;">
-          <div class="w3-card-4" style="width:50%;">
-              <img src="{{ this.imagePath }}" style="width:100%; height: 80%;">
-            <div class="w3-container w3-center" style="max-height: 150px;">
-              <h4 style="text-align: center; padding-top: 12px; font-weight: 600; font-family: 'Roboto', 'Lato', sans-serif;">{{ this.title }}</h4>
-              <p>Lorem ipsum dolor sit amet</p>
-            </div>
-          </div> 
-      </div>
+        <div class="w3-card-4" style="width:50%;">
+           <img src="{{ this.imagePath }}" style="width:100%; height: 80%;">
+            <h4 style="text-align: center; padding-top: 12px; font-weight: 600; font-family: 'Roboto', 'Lato', sans-serif;">{{ this.title }}</h4>
+              <div class="w3-container w3-center" style="max-height: 150px;">
+                  <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                      <h4 style="font-size: 15px;"> Price: {{ this.price }}</h4>
+                    <!-- Identify your business so that you can collect the payments. -->
+                    <input type="hidden" name="business" value="joel.maneskold.ha11b@gmail.com">
+
+                    <!-- Specify a PayPal Shopping Cart Add to Cart button. -->
+                    <input type="hidden" name="cmd" value="_cart">
+                    <input type="hidden" name="add" value="1">
+
+                    <!-- Specify details about the item that buyers will purchase. -->
+                    <input type="hidden" name="item_name" value="{{ this.title }}">
+                    <input type="hidden" name="amount" value="{{ this.price }}">
+                    <input type="hidden" name="currency_code" value="USD">  
+
+                    <!-- Display the payment button. -->
+                    <input type="image" name="submit"
+                      src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+                      alt="Add to Cart">
+                    <img alt="" width="1" height="1"
+                      src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+                  </form>    
+              </div>
+            </div> 
+          </div>
+         </a>
     </div>
   {{/each}}
 {{/each}}
-
-<!-- <p>  {{this._id}} </p> -->
