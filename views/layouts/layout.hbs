@@ -4,8 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="google-signin-client_id" content="582394131801-es51utnc1jgvkblhehi8uhtrksajvb5e.apps.googleusercontent.com">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' /> 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!-- Laddar hem w3schools CSS library -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </head>
 
   <body>
@@ -17,20 +18,22 @@
       {{{body}}}
 
       <div class="footer">
-        <a href="https://www.freeprivacypolicy.com/privacy/view/1265ff727d645f05247916e1c718d804"><p>Privacy policy</p></a>
+        <a href="https://www.freeprivacypolicy.com/privacy/view/1265ff727d645f05247916e1c718d804" target="_blank"><p>Privacy policy</p></a> 
       </div>
    
     </div>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script> 
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script> 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script> <!-- Laddar in Jquery CDN -->
     <script>
           
+      // Show/hide, är man inloggad så ska (logga ut) knappen visas och är man utloggad så ska (logga in) knappen visas. 
       $(document).ready(function() {
         $(".button4").hide();
       });
+      // Logga in funktion
         function onSignIn(googleUser) {
           var profile = googleUser.getBasicProfile();
           console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
@@ -42,6 +45,7 @@
         }
     </script>
     <script>
+      // Logga ut funktion
       function signOut() {
         var auth2 = gapi.auth2.getAuthInstance();
         auth2.signOut().then(function () {
@@ -49,15 +53,6 @@
           $(".button4").hide();
         });
       }
-    </script>
-    <script>
-
-      $( document ).ready(function() {
-    
-          $('iframe').attr('src', $('iframe').attr('src'));
-
-      });
-
     </script>
   </body>
 </html>

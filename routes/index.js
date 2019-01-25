@@ -1,6 +1,6 @@
 var express = require('express');
-var router = express.Router();
-var Product = require('../mongoose_schema/products');
+var router = express.Router(); // Anropar express
+var Product = require('../mongoose_schema/products'); // Ansluter åtkomst till databasen
 
 // GET home page. Renderar startsidan 
 router.get('/', function(req, res, next) {
@@ -19,26 +19,19 @@ router.get('/product-page/index', function(req, res, next) {
   });
 });
 
-// GET request startpage
+// Get request startpage
 router.get('/main-page/startpage', function(req, res, next) {
   res.render('main-page/startpage');
 });
 
+// Get contact page
 router.get('/contact', function(req, res, next) {
   res.render('contact');
 });
 
-router.get('/product-page/catalog', function(req, res, next) {
-  res.render('product-page/catalog');
-});
-
+// Get form respons after succefully delivering a message
 router.get('/success', function(req, res, next) {
   res.render('success');
 });
-
-router.post('/product-page/catalog-view', function (req, res) {
-  res.send();
-});
-
 
 module.exports = router;

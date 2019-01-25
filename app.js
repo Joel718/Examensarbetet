@@ -67,41 +67,31 @@ app.use(function(err, req, res, next) {
 });
 
 
+// Sends email to test account using nodemailer
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'testtestsson611@gmail.com',
+    pass: 'Test!123'
+  }
+});
 
-  var transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: 'testtestsson611@gmail.com',
-      pass: 'Test!123'
-    }
-  });
+var mailOptions = {
+  from: 'testtestsson611@gmail.com',
+//   from: req.body.name + req.body.email,
+  to: 'testtestsson611@gmail.com',
+  subject: 'Sending Email using Node.js',
+//   text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
+  text: 'this works well'
+};
 
-  var mailOptions = {
-    from: 'testtestsson611@gmail.com',
- //   from: req.body.name + req.body.email,
-    to: 'testtestsson611@gmail.com',
-    subject: 'Sending Email using Node.js',
- //   text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
-    text: 'this works well'
-  };
-
-  transporter.sendMail(mailOptions, function(error, info){
-    if (error) {
-      console.log(error);
-    } else {
-      console.log('Email sent: ' + info.response);
-    }
-  });
-
-  app.get('/api/users', function(req, res) {
-    var user_id = req.param(id);
-    var token = req.param('token');
-    var geo = req.param('geo');  
-  
-    res.send(user_id + ' ' + token + ' ' + geo);
-  });
-
-// });
+transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});
 
 // Ansluter till port 8000, denna port är ett krav av "heroku" https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment
 var port = process.env.PORT;
