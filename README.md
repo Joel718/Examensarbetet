@@ -4,6 +4,10 @@ Detta projekt kommer jag att med Node.js bygga en färdig webbshop. Tanken är a
 
 Jag kommer i senare skede skriva användardokumentation för hur man startar upp webshoppen och hur man använder den. 
 
+# Backlogg
+
+Please see "issues" tab
+
 
 # How to setup project
 
