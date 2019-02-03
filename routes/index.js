@@ -34,6 +34,7 @@ router.get('/success', function(req, res, next) {
   res.render('success');
 });
 
+// Get aboutUs page
 router.get('/aboutUs', function(req, res, next) {
   res.render('aboutUs');
 });
