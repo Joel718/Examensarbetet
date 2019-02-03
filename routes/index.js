@@ -34,4 +34,8 @@ router.get('/success', function(req, res, next) {
   res.render('success');
 });
 
+router.get('/aboutUs', function(req, res, next) {
+  res.render('aboutUs');
+});
+
 module.exports = router;

@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133559535-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-133559535-1');
+    </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="google-signin-client_id" content="582394131801-es51utnc1jgvkblhehi8uhtrksajvb5e.apps.googleusercontent.com">
@@ -33,7 +43,7 @@
       // Show/hide, är man inloggad så ska (logga ut) knappen visas och är man utloggad så ska (logga in) knappen visas. 
       $(document).ready(function() {
         $(".button4").hide();
-      });
+     });
       // Logga in funktion
         function onSignIn(googleUser) {
           var profile = googleUser.getBasicProfile();
@@ -42,7 +52,7 @@
           console.log('Image URL: ' + profile.getImageUrl());
           console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
           $(".button4").show();
-          $(".g-signin2").hide();
+       //  $(".g-signin2").hide();
         }
     </script>
     <script>

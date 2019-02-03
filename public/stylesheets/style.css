@@ -24,6 +24,7 @@ iframe {
   font-size: 11px;
   color: white;
   text-align: center;
+  background-color: rgb(8, 8, 8);
 }
 
 html {
@@ -92,16 +93,6 @@ li a {
   margin-top: 39.5%;
   margin-left: 10%;
   display: flex;
-  color: rgb(38, 38, 38);
-  font-family: helvetica;
-  text-decoration: none;
-  text-transform: uppercase;
-
-}
-
-.button4 {
-
-  margin-top: 39.5%;
   color: rgb(38, 38, 38);
   font-family: helvetica;
   text-decoration: none;
@@ -218,3 +209,18 @@ iframe {
    top: 12%;
   }
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
